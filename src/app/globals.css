@@ -42,6 +42,7 @@
 }
 
 * {
+	user-select: none; /** Disables ability to select text and other resources **/
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
@@ -54,8 +55,21 @@ body {
 }
 
 body {
+	position: fixed;
 	color: rgb(var(--callout-rgb));
+	height: calc(100vh - env(safe-area-inset-bottom) - env(safe-area-inset-top));
 	background-color: rgb(255, 255, 255);
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: 0;
+}
+
+@supports (-webkit-touch-callout: none) {
+	body {
+		height: -webkit-fill-available;
+	}
 }
 
 a {
