@@ -2,7 +2,18 @@
 
 import {createTheme} from "@mui/material/styles";
 
+const globalStyles = {
+	typography: {
+		fontFamily: ["Lato"].join(","),
+		fontSize: 16,
+		allVariants: {
+			color: "#000"
+		}
+	}
+};
+
 const lightTheme = createTheme({
+	...globalStyles,
 	palette: {
 		primary: {
 			main: "#fff"
@@ -12,6 +23,10 @@ const lightTheme = createTheme({
 		},
 		text: {
 			primary: "#000"
+		},
+		grey: {
+			50: "#C1C1C1",
+			100: "#F5F5F5"
 		},
 		divider: "#C1C1C1",
 		background: {

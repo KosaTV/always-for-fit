@@ -13,8 +13,8 @@ const Navbar = () => {
 	return (
 		<Box sx={styles.topbarCnt}>
 			<Box sx={styles.screenTitleBox}>
-				<Typography>Overview</Typography>
-				<Typography sx={{fontWeight: "bold", fontSize: "2em"}}>{getCurrentPageName(pathname)}</Typography>
+				<Typography sx={{color: "gray", fontSize: "1em"}}>Overview</Typography>
+				<Typography sx={{fontWeight: "bold", fontSize: "2.5em"}}>{getCurrentPageName(pathname)}</Typography>
 			</Box>
 			<ProfileHeader />
 		</Box>
