@@ -5,13 +5,13 @@ import "./globals.css";
 const inter = Inter({subsets: ["latin"]});
 
 export const metadata: Metadata = {
-	title: "Always For Fit",
+	title: "Always 4 Fit",
 	description: "Stay Always Fit by tracking your weight",
 	manifest: "/manifest.json",
 	formatDetection: {telephone: false},
 	appleWebApp: {
 		capable: true,
-		title: "Always For Fit",
+		title: "Always 4 Fit",
 		statusBarStyle: "default"
 	},
 	icons: {
