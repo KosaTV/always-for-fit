@@ -7,11 +7,12 @@ interface ActionButtonProps {
 	leftIcon?: React.ReactNode;
 	rightIcon?: React.ReactNode;
 	fill?: boolean;
+	onClick?: () => void;
 }
 
-const ActionButton = ({children, leftIcon, rightIcon, fill}: ActionButtonProps) => {
+const ActionButton = ({children, leftIcon, rightIcon, fill, onClick}: ActionButtonProps) => {
 	return (
-		<Button sx={{...styles.button, ...(fill && styles.longButton)}}>
+		<Button onClick={onClick} sx={{...styles.button, ...(fill && styles.longButton)}}>
 			{leftIcon && <Box sx={{...styles.buttonIcon, ...styles.leftButtonIcon}}>{leftIcon}</Box>}
 			{children}
 			{rightIcon && <Box sx={{...styles.buttonIcon, ...styles.rightButtonIcon}}>{rightIcon}</Box>}

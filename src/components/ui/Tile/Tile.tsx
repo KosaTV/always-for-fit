@@ -11,10 +11,12 @@ const Tile = ({title, options, content}: TileProps) => {
 	return (
 		<Box
 			sx={{
+				display: "flex",
+				flexDirection: "column",
 				backgroundColor: "primary.main",
 				marginBottom: "20px",
 				width: "100%",
-				height: "50%",
+				minHeight: "150px",
 				overflow: "hidden",
 				borderRadius: "16px",
 				boxShadow: "0 2px 24px -16px gray",
@@ -31,7 +33,7 @@ const Tile = ({title, options, content}: TileProps) => {
 					</ButtonBase>
 				)}
 			</Box>
-			<Box>{content}</Box>
+			<Box sx={{flex: "1"}}>{content}</Box>
 		</Box>
 	);
 };

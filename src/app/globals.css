@@ -92,3 +92,10 @@ a {
 		color-scheme: dark;
 	}
 }
+
+.main {
+	position: absolute;
+	top: 132px;
+	width: calc(100% - 48px);
+	height: calc(100% - 132px - 120px);
+}
