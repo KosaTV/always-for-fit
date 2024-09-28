@@ -1,5 +1,10 @@
 import type {Metadata, Viewport} from "next";
 import {Inter} from "next/font/google";
+import {Box, ThemeProvider} from "@mui/material";
+import {lightTheme} from "@/theme";
+import {AppRouterCacheProvider} from "@mui/material-nextjs/v13-appRouter";
+import Navbar from "@/components/ui/Navbar/Navbar";
+import Topbar from "@/components/ui/Topbar/Topbar";
 import "./globals.css";
 
 const inter = Inter({subsets: ["latin"]});
@@ -39,7 +44,17 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>{children}</body>
+			<body className={inter.className}>
+				<AppRouterCacheProvider options={{key: "css"}}>
+					<ThemeProvider theme={lightTheme}>
+						<Box sx={{height: "100%", width: "100%", position: "relative", padding: "24px"}}>
+							<Topbar />
+							{children}
+							<Navbar />
+						</Box>
+					</ThemeProvider>
+				</AppRouterCacheProvider>
+			</body>
 		</html>
 	);
 }
